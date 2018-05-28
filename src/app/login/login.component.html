@@ -1,0 +1,76 @@
+<div class="wrapper">
+  <form [formGroup]="loginForm" class="form-signin" (ngSubmit)="onLogin( )" [hidden]="loggedIn">
+    <h2 class="clean-font">login</h2>
+
+    <input type="text" class="form-control" formControlName="username" name="username" placeholder="Username" required autofocus="" />
+    <br />
+
+    <input type="password" class="form-control" formControlName="password" name="password" placeholder="Password" required />
+
+    <div class="form-group">
+      <br/>
+      <!--<label >
+          <input type="checkbox" name="remember-me" id="remember-me" />&nbsp;<span class="clean-font">Remember me</span>
+      </label>-->
+    </div>
+    <button class="btn btn-primary btn-block" type="submit">Login</button>
+    <h3 class="clean-font" style="color: darkred">{{errMsg}}</h3>
+  </form>
+  <div style="margin-left: 2%;margin-right: 2%;width: 40%" [hidden]="!loggedIn">
+    <table>
+      <tr>
+        <td height="10" width="100%" bgcolor="#f0f8ff" colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h2 class="clean-font">{{firstname}}, Welcome to Admin Portal!</h2>
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td height="10" width="100%" bgcolor="#87ceeb" colspan="2"></td>
+      </tr>
+      <!--<tr>
+        <td>
+          <h3 class="clean-font">Total accounts signed up:</h3>
+          <br>
+        </td>
+        <td><h3 class="clean-font" style="color: #87ceeb">{{numberOfAccounts}}</h3></td>
+      </tr>
+      <tr>
+        <td height="10" width="100%" bgcolor="#8fbc8f" colspan="2"></td>
+      </tr>
+      <tr>
+        <td>
+          <h3 class="clean-font">Verified accounts:</h3>
+          <br>
+        </td>
+        <td><h3 class="clean-font" style="color: #8fbc8f">{{numberOfVerifiedAccounts}}</h3></td>
+      </tr>
+      <tr>
+        <td height="10" width="100%" bgcolor="#cd853f" colspan="2"></td>
+      </tr>
+      <tr>
+        <td>
+          <h3 class="clean-font">Trial accounts:</h3>
+          <br>
+        </td>
+        <td><h3 class="clean-font" style="color: #cd853f">{{numberOfTrialAccounts}}</h3></td>
+      </tr>
+      <tr>
+        <td height="10" width="100%" bgcolor="#8b4513" colspan="2"></td>
+      </tr>
+      <tr>
+        <td>
+          <h3 class="clean-font">Non-Trial accounts:</h3>
+          <br>
+        </td>
+        <td><h3 class="clean-font" style="color: #8b4513">{{numberOfNonTrialAccounts}}</h3></td>
+      </tr>
+      <tr>
+        <td height="10" width="100%" bgcolor="#f0f8ff"></td>
+      </tr>-->
+    </table>
+
+  </div>
+</div>

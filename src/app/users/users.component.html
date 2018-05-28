@@ -1,0 +1,6 @@
+<div style="margin-left: 2%;margin-right: 2%;text-align:center">
+  <h2 class="clean-font">Manage Admins</h2>
+  <br>
+  <ng2-smart-table [settings]="settings" [source]="users" (editConfirm)="onSaveConfirm($event)" (deleteConfirm)="onDeleteConfirm($event)" (createConfirm)="onCreateConfirm($event)"></ng2-smart-table>
+  <Hr>
+</div>
